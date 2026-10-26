@@ -1,8 +1,6 @@
 Meeting notes:
 
-A template for your meeting notes:
-
-- When: 10/26/2026 2:20 - 
-- Who: Mason L Holden, 
+- When: 10/21/2026 2:20 - 3:00
+- Who: Mason L Holden, Pedro Curiel, Malik Mitchell
 - Where: in-person
-- What: 
+- What: Trello progress, task allocation, road mapping, UI design, architecture
