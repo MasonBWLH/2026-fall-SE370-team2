@@ -10,3 +10,9 @@ Sprint 2:
 - Who: Mason L Holden, Pedro Curiel, Malik Mitchell, Darryl Hutagaol
 - Where: in-person
 - What: Progress (login UI, initial classes), logistics planning, task allocation
+
+Stand Up:
+- When: 11/9/2026 2:20 - 2:30
+- Who: Mason L Holden, Pedro Curiel, Malik Mitchell, Darryl Hutagaol
+- Where: in-person
+- What: progress updates, UI, classes, and login integration
