@@ -2,30 +2,62 @@ package dao;
 
 import model.User;
 
-//handles access to user data
-public class UserDAO implements UserDAOInterface {
-    // temporay for testing
-    private User testUser;
+import java.util.ArrayList;
+import java.util.List;
 
-     public UserDAO() {
-        testUser = new User(
-            1,
-            "Test User",
-            "test@email.com",
-            "password123"
+// Handles access to user account data
+public class UserDAO implements UserDAOInterface {
+
+    private List<User> users;
+
+    public UserDAO() {
+
+        users = new ArrayList<>();
+
+        // Temporary test account
+        users.add(
+                new User(
+                        1,
+                        "Test User",
+                        "test@email.com",
+                        "password123"
+                )
         );
     }
 
-//searches for a user by email
-@Override 
-public User findByEmail(String email) {
+    // Finds a user using their email address
+    @Override
+    public User findByEmail(String email) {
 
-    if(testUser.getEmail().equalsIgnoreCase(email)){
-        return testUser;
+        for (User user : users) {
 
+            if (
+                    user.getEmail()
+                            .equalsIgnoreCase(email)
+            ) {
+
+                return user;
+            }
         }
-    return null;
+
+        return null;
+    }
+
+    // Adds a new user account
+    @Override
+    public boolean addUser(User user) {
+
+        // Do not allow duplicate emails
+        if (
+                findByEmail(user.getEmail())
+                        != null
+        ) {
+
+            return false;
+        }
+
+        users.add(user);
+
+        return true;
     }
 }
-
-//temporary login : email: test@gmail.com, password: password123

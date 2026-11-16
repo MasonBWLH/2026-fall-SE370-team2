@@ -1,28 +1,74 @@
 import controller.LoginController;
+import controller.RegisterController;
+
 import dao.UserDAO;
+
 import service.AuthService;
+
 import view.LoginPage;
 
 import javax.swing.SwingUtilities;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(
+            String[] args
+    ) {
 
-        SwingUtilities.invokeLater(() -> {
+        SwingUtilities.invokeLater(
+                () -> {
 
-            UserDAO userDAO = new UserDAO();
+                    // One shared UserDAO
+                    UserDAO userDAO =
+                            new UserDAO();
 
-            AuthService authService =
-                    new AuthService(userDAO);
+                    // One shared authentication service
+                    AuthService authService =
+                            new AuthService(
+                                    userDAO
+                            );
 
-            LoginController loginController =
-                    new LoginController(authService);
+                    // Login controller
+                    LoginController loginController =
+                            new LoginController(
+                                    authService
+                            );
 
-            LoginPage loginPage =
-                    new LoginPage(loginController);
+                    // Registration controller
+                    RegisterController registerController =
+                            new RegisterController(
+                                    authService
+                            );
 
-            loginPage.setVisible(true);
-        });
+                    // Start application at login screen
+                    LoginPage loginPage =
+                            new LoginPage(
+                                    loginController,
+                                    registerController
+                            );
+
+                    loginPage.setVisible(
+                            true
+                    );
+                }
+        );
     }
 }
+// import view.UserProfileForm;
+
+// import javax.swing.SwingUtilities;
+
+// public class Main {
+
+//     public static void main(String[] args) {
+
+//         SwingUtilities.invokeLater(() -> {
+
+//             // Temporary test user ID
+//             UserProfileForm profileForm =
+//                     new UserProfileForm(1);
+
+//             profileForm.setVisible(true);
+//         });
+//     }
+// }
