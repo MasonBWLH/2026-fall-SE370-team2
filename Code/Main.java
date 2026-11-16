@@ -62,7 +62,7 @@ public class goal {
     private String status;
 
     //Constructor
-    public Workout(int ID, int userID, int targetValue, int currentValue, String targetDate, String type, String status){
+    public void Workout(int ID, int userID, int targetValue, int currentValue, String targetDate, String type, String status){
         this.ID = ID;
         this.userID = userID;
         this.targetValue = targetValue;
@@ -206,8 +206,13 @@ public class exercise {
         System.out.println(authenticated);
     }
 }
-
+/* 
     public void setName(String name) {
         this.name = name;
+    }*/
+
+
+    public static void main(String[] args){
+        MyFrame mainFrame = new MyFrame();
     }
 }
