@@ -24,3 +24,9 @@ Stand Up:
 - Who: Mason L Holden, Pedro Curiel, Malik Mitchell
 - Where: in-person
 - What: progress updates, next steps
+
+Stand Up:
+- When: 11/18/2026 2:20 - 2:30
+- Who: Mason L Holden, Pedro Curiel, Malik Mitchell
+- Where: in-person
+- What: progress updates, next steps
