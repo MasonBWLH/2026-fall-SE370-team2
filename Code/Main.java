@@ -183,6 +183,7 @@ public class exercise {
     public void setWeight(int weight) {
         this.weight = weight;
     }
+}
 
 public class NutritionLog {
     // Attributes
