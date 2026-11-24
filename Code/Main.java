@@ -184,7 +184,7 @@ public class exercise {
         this.weight = weight;
     }
 
-    public class NutritionLog {
+public class NutritionLog {
     // Attributes
     private int ID;
     private int userID;
@@ -394,29 +394,29 @@ public class ProgressTracker {
 }
 
     //SECURITY SYSTEM
-    public static String hashPass(String password) {
-        return Integer.toString(password.hashCode());
-    }
+public static String hashPass(String password) {
+    return Integer.toString(password.hashCode());
+}
 
-    public static boolean authenticatePass(String enteredPass, String hashedPass) {
-        return hashPass(enteredPass).equals(hashedPass);
-    }
+public static boolean authenticatePass(String enteredPass, String hashedPass) {
+    return hashPass(enteredPass).equals(hashedPass);
+}
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
 
-        String password = "MyPassword123"; //Example password++++++++++++++++++++++++++++
+    String password = "MyPassword123"; //Example password++++++++++++++++++++++++++++
 
-        String hashedPassword = hashPass(password);
+    String hashedPassword = hashPass(password);
 
-        boolean authenticated = authenticatePass(password, hashedPassword);
+    boolean authenticated = authenticatePass(password, hashedPassword);
 
-        System.out.println(authenticated);
+    System.out.println(authenticated);
     }
 }
 
 
 
-    public static void main(String[] args){
-        MyFrame mainFrame = new MyFrame();
+public static void main(String[] args){
+    MyFrame mainFrame = new MyFrame();
     }
 }
